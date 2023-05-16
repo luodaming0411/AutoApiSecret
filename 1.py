@@ -43,7 +43,7 @@ def main():
     'Content-Type':'application/json'
     }
     try:
-        if req.get(r'https://graph.microsoft.com/v1.0/me/drive/root',headers=headers).status_code == 200:
+        if req.get(r'https://graph.microsoft.com/v1.0/me/mailFolders/Inbox/messages/delta',headers=headers).status_code == 200:
             num1+=1
             print("1调用成功"+str(num1)+'次')
         if req.get(r'https://graph.microsoft.com/v1.0/me/drive',headers=headers).status_code == 200:
@@ -61,16 +61,16 @@ def main():
         if req.get(r'https://graph.microsoft.com/v1.0/me/mailFolders/inbox/messageRules',headers=headers).status_code == 200:
             num1+=1
             print('6调用成功'+str(num1)+'次')    
-        if req.get(r'https://graph.microsoft.com/v1.0/me/mailFolders/Inbox/messages/delta',headers=headers).status_code == 200:
+        if req.get(r'https://graph.microsoft.com/v1.0/applications?$count=true',headers=headers).status_code == 200:
             num1+=1
             print('7调用成功'+str(num1)+'次')
         if req.get(r'https://graph.microsoft.com/v1.0/me/drive/root/children',headers=headers).status_code == 200:
             num1+=1
             print('8调用成功'+str(num1)+'次')
-        if req.get(r'https://api.powerbi.com/v1.0/myorg/apps',headers=headers).status_code == 200:
+        if req.get(r'https://graph.microsoft.com/v1.0/applications/03c2bc3d-adaf-45b9-86e2-e95bddc6ad3d/ownerss',headers=headers).status_code == 200:
             num1+=1
             print('8调用成功'+str(num1)+'次') 
-        if req.get(r'https://graph.microsoft.com/v1.0/me/mailFolders',headers=headers).status_code == 200:
+        if req.get(r'https://graph.microsoft.com/beta/me/mailFolders/inbox/messagerules',headers=headers).status_code == 200:
             num1+=1
             print('9调用成功'+str(num1)+'次')
         if req.get(r'https://graph.microsoft.com/v1.0/me/outlook/masterCategories',headers=headers).status_code == 200:
